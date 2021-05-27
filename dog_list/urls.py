@@ -14,9 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
-    path('owners')
+    path('owners', include('owners.urls'))
    
 ]
+
+# localhost:8000/humandog path의 역활:  담당하는 app으로 보내줌
